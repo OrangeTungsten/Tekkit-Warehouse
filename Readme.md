@@ -16,3 +16,8 @@ Each item type is sorted into its own dedicated chest. The system logs totals, b
 - Interactive GUI & Pagination: The interface supports keyboard navigation (UP, DOWN) and dynamic pagination (PGUP, PGDOWN), displaying up to 10 items per page. The END button triggers immediate application termination.
 - Economic Tracking: The software calculates and displays both the total EMC value of the current inventory and the cumulative EMC value of all shipped items.
 - Pulse-Width Exporting: When an export is confirmed, the system generates controlled redstone pulses (0.25s intervals) to safely trigger the physical filters without lagging. 
+
+# How to install it?
+Just copy content from WAREHOUSE.lua to the blank app created on your CC Computer. 
+
+You also can copy a WAREHOUSE.lua file to of your CC Computer storadge which could be found on: ' %appdata%tekkit_root/computer/num_of_your_comp, but in that case, .lua extension should be removed.
