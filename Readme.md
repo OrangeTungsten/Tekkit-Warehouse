@@ -20,4 +20,7 @@ Each item type is sorted into its own dedicated chest. The system logs totals, b
 # How to install it?
 Just copy content from WAREHOUSE.lua to the blank app created on your CC Computer. 
 
-You also can copy a WAREHOUSE.lua file to of your CC Computer storadge which could be found on: `%appdata%tekkit_root/computer/num_of_your_comp`, but in that case, .lua extension should be removed.
+You also can copy a WAREHOUSE.lua file to of your CC Computer storage which could be found on: `%appdata%tekkit_root/computer/num_of_your_comp`, but in that case, .lua extension should be removed.
+
+# Preview
+<img width="1550" height="800" alt="2026-04-23_18 26 30" src="https://github.com/user-attachments/assets/d7ef8ff4-f7d2-4c14-b476-d8e3c3a91413" />
