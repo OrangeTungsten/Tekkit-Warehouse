@@ -1,5 +1,7 @@
 This repository contains a Lua-based [ComputerCraft](https://tekkitclassic.fandom.com/wiki/Category:ComputerCraft) application for [Tekkit Classic](https://tekkitclassic.fandom.com/wiki/The_Tekkit_Wiki), acting as a fully integrated warehouse management and export system. It monitors in-game resources using the [ccSensors](https://tekkitclassic.fandom.com/wiki/Category:CcSensors) API to track chest inventories, and controls [RedPower2](https://tekkitclassic.fandom.com/wiki/Category:RedPower2) hardware to automate item extraction.
 
+<img width="411" height="237" alt="Temrinal" src="https://github.com/user-attachments/assets/a5fd41ea-99a6-4e57-85bf-163756ee1121" />
+
 # Project Overview
 The application provides a Graphical User Interface (GUI) to monitor stock levels and Equivalent Exchange (EMC) values across a storage facility. 
 
