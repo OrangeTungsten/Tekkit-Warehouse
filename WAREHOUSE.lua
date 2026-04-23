@@ -48,7 +48,7 @@ function drawMain()
 	term.write(string.rep("=", w))
 
 	term.setCursorPos(3, 4)
-	term.write("Item       Stacks     Total    EMC      ShpEMC")
+	term.write("Item       Stacks     Total    EMC     Shipped")
     
 	term.setCursorPos(3, 5)
 	term.write(string.rep("-", w-4))
