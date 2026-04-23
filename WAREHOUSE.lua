@@ -9,9 +9,9 @@
 -- ║  counts and EMC values. Supports multi-page navigation     ║
 -- ║  and exports items via bundled redstone output.            ║
 -- ║------------------------------------------------------------║
--- ║  Author    :  Avram Kovačević                              ╚═════════════════╗
--- ║  GitHub    :  github.com/OrangeTungsten/TekkitClassic-CC - Sensors-Warehouse ║
--- ║  Version   :  1.0                                          ╔═════════════════╝
+-- ║  Author    :  Avram Kovačević                              ╚═══════════════╗
+-- ║  GitHub    :  github.com/OrangeTungsten/TekkitClassic-CC-Sensors-Warehouse ║
+-- ║  Version   :  1.0                                          ╔═══════════════╝
 -- ║  Developed :  Mar, 2022    |   Published:  April, 2026     ║
 -- ╚════════════════════════════════════════════════════════════╝
 
