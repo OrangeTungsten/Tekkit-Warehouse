@@ -7,7 +7,7 @@ This repository contains a Lua-based [ComputerCraft](https://tekkitclassic.fando
 # Project Overview
 The application provides a Graphical User Interface (GUI) to monitor stock levels and Equivalent Exchange (EMC) values across a storage facility. 
 
-Each item type is sorted into its own dedicated chest. The system logs totals, but also acts as an active controller for items extrction. By selecting an item and specifying a quantity, the program triggers specific RedPower2 filters with appropriate number of pulses, beneath  to extract the exact amount requested.
+Each item type is sorted into its own dedicated chest. The system logs totals, but also acts as an active controller for items extrction. By selecting an item and specifying a quantity, the program triggers specific RedPower2 filters with appropriate number of redstone pulses to extract the requested amount.
 
 # Key Features & Technical Details
 - CC Sensors Sensor Integration: The system polls inventory data using the ccSensors API, gathering metrics across multiple distinct physical sensors to monitor separate chests. 
@@ -17,10 +17,10 @@ Each item type is sorted into its own dedicated chest. The system logs totals, b
 - Economic Tracking: The software calculates and displays both the total EMC value of the current inventory and the cumulative EMC value of all shipped items.
 - Pulse-Width Exporting: When an export is confirmed, the system generates controlled redstone pulses (0.25s intervals) to safely trigger the physical filters without lagging. 
 
-# How to install it?
+# How to install?
 Just copy content from WAREHOUSE.lua to the blank app created on your CC Computer. 
 
 You also can copy a WAREHOUSE.lua file to of your CC Computer storage which could be found on: `%appdata%tekkit_root/computer/num_of_your_comp`, but in that case, .lua extension should be removed.
 
 # Preview
-<img width="1550" height="800" alt="2026-04-23_18 26 30" src="https://github.com/user-attachments/assets/d7ef8ff4-f7d2-4c14-b476-d8e3c3a91413" />
+<img width="1550" height="800" alt="2026-04-24_23 50 37" src="https://github.com/user-attachments/assets/88eab207-209a-4e0f-bc63-073d966fd25b" />
