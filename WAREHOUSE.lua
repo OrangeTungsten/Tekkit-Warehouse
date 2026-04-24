@@ -17,9 +17,10 @@
 
 
 w,h = term.getSize()
+monitor = peripheral.wrap("right")
 
 Items = {}
-Items = {"Coal", "Copper", "Tin", "Iron", "Silver", "Redstone", "Nikolite", "Lapis", "Uranium", "Sapphire", "Dirt", "Cobble", "Gravel", "Glass", "Wood"}
+Items = {"Coal", "Copper", "Tin", "Iron", "Silver", "Redstone", "Nikolite", "Lapis", "Uranium", "Sapphire", "Cobble", "Dirt", "Gravel", "Glass", "Wood"}
 EMC = {}
 EMC = {128, 85, 256, 256, 512, 64, 128, 864, 4096, 1024, 1, 1, 4, 1, 8}
 TotalItems = {}
@@ -29,7 +30,7 @@ totals = 0
 exported = 0
 
 -- Output redston wire colors; must follow Items array
-color = {colors.black, colors.orange, colors.white, colors.lightGray, colors.lightBlue, colors.red, colors.gray, colors.blue, colors.yellow, colors.purple, colors.magenta, colors.cyan, colors.green, colors.lime, colors.pink}
+color = {colors.black, colors.orange, colors.white, colors.lightGray, colors.lightBlue, colors.red, colors.gray, colors.blue, colors.yellow, colors.purple, colors.cyan, colors.magenta, colors.green, colors.lime, colors.pink}
 
 -- Paging variables
 PAGE_SIZE = 10
@@ -204,9 +205,9 @@ function acquireData()
 	------------------------------
 
 	-- Footer totals
-	totalEMC = 0
+	TotalEMC = 0
 	for i=1, #Items do
-		totalEMC = totalEMC + TotalItems[i] * EMC[i]
+		TotalEMC = TotalEMC + TotalItems[i] * EMC[i]
 	end 
 
 	totalShippedEMC = 0
@@ -254,7 +255,7 @@ function printValues(panel)
 
     term.setCursorPos(20, h-1)
 	term.write("TotalEMC: ")
-	printRightCentered(tostring(totalEMC), 37, h-1)
+	printRightCentered(tostring(TotalEMC), 37, h-1)
 	printRightCentered(tostring(totalShippedEMC), 48, h-1)
 
 end
@@ -274,6 +275,46 @@ function Export(item, qty)
 	end
 
 	ShippedItems[item] = ShippedItems[item] + (qty * 8)
+
+end
+
+function printPeripheral()
+
+    	
+    	wM, hM = monitor.getSize()
+
+        monitor.clear()
+    	monitor.setCursorPos(wM/2-2, 1)
+    	monitor.write("WAREHOUSE")
+
+    	monitor.setCursorPos(1, 2)
+    	monitor.write(string.rep("=", wM))
+
+    	monitor.setCursorPos(2, 3)
+        monitor.write("Items     Total")
+
+    	monitor.setCursorPos(1, 4)
+    	monitor.write(string.rep("-", wM))
+
+        -- Print first 12 items
+    	for i=1,12 do
+
+    		-- Item names
+    		monitor.setCursorPos(2, i+4)
+    		monitor.write(Items[i])
+            
+    		-- Total
+            local val = tostring(math.floor(TotalItems[i]))
+    		monitor.setCursorPos(wM-#val, i+4) -- right centered
+    		monitor.write(val)
+
+    	end
+
+    	monitor.setCursorPos(1, hM-1)
+    	monitor.write(string.rep("-", wM))
+
+    	monitor.setCursorPos(1, hM)
+    	monitor.write("TotalEMC: " .. TotalEMC)
 
 end
 
@@ -298,7 +339,9 @@ end
 while true do
 
 	term.clear()
+
 	drawMain()
+    printPeripheral()
 
 	-- Selection cursor (*)
 	term.setCursorPos(2, selectREL+5)
